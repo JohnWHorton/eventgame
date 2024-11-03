@@ -1,5 +1,4 @@
 // server-side socket.io backend event handling
-// testing git
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
