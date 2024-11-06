@@ -1,0 +1,35 @@
+aws marion eventgame
+
+Instance ID						i-0047628e95339e1da
+Public IPv4 address			18.171.54.238 | open address 
+Private IPv4 addresses		172.31.20.181
+Public IPv4 DNS				ec2-18-171-54-238.eu-west-2.compute.amazonaws.com
+|
+open address 
+Hostname type					IP name: ip-172-31-20-181.eu-west-2.compute.internal
+Private IP DNS name (IPv4 only)		ip-172-31-20-181.eu-west-2.compute.internal
+Instance type					t2.micro
+Elastic IP addresses			–
+Auto-assigned IP address	18.171.54.238 [Public IP]
+VPC ID							vpc-06eec9a2fb48917ff 
+IAM Role	–
+Subnet ID						subnet-00b65b97c9516fd75 
+
+
+ssh -i C:\pemfiles\marionaws.ppk ec2-user@ec2-18-171-54-238.eu-west-2.compute.amazonaws.com
+
+<html>
+<head>
+<title>Event Game</title>
+</head>
+<body>
+<p>testing event game</p>
+</body>
+</html>
+
+
+
+sudo a2dissite 000-default.conf
+service apache2 reload
+
+sudo a2ensite 000-default

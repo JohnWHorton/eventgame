@@ -3033,20 +3033,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"distributed-texasholdem@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "distributed-texasholdem@workspace:."
-  dependencies:
-    cluster: ^0.7.7
-    express: ^4.17.1
-    heroku: ^7.39.3
-    jest: ^26.0.1
-    jshint: ^2.9.3
-    pokersolver: ^2.1.3
-    socket.io: ^2.3.0
-  languageName: unknown
-  linkType: soft
-
 "dom-serializer@npm:0":
   version: 0.2.2
   resolution: "dom-serializer@npm:0.2.2"
@@ -3401,6 +3387,20 @@ __metadata:
   checksum: 1875311c42fcfe9c707b2712c32664a245629b42bb0a5a84439762dd0fd637fc54d078155ea83c2af9e0323c9ac13687e03cfba79b03af9f40c89b4960099374
   languageName: node
   linkType: hard
+
+"eventgame@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "eventgame@workspace:."
+  dependencies:
+    cluster: ^0.7.7
+    express: ^4.17.1
+    heroku: ^7.39.3
+    jest: ^26.0.1
+    jshint: ^2.9.3
+    pokersolver: ^2.1.3
+    socket.io: ^2.3.0
+  languageName: unknown
+  linkType: soft
 
 "exec-sh@npm:^0.3.2":
   version: 0.3.4

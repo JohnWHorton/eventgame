@@ -15,82 +15,14 @@
 </head>
 
 <body>
-	<!-- <header>
+	<header>
 		<div class="navbar-fixed" id="navbar-ptwu">
 			<nav class="grey darken-4" role="navigation" id="navbar">
 				<a href="https://peterlwu.com" class="brand-logo center"><img class="responsive-img hover-item-2"
 						src="https://i.imgur.com/aICJn1m.png" width="64" height="64"></img></a>
 			</nav>
 		</div>
-	</header> -->
-	<nav class="navbar navbar-custom navbar-expand-sm navbar-dark sticky-top">
-
-        <span style="font-size: 1.5rem; margin-right: 1rem;">AFL Pools</span>
-
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="collapse_target">
-
-
-            <ul class="navbar-nav" style="width: 100%; justify-content: flex-end; gap: 15px;">
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showDemoVideo()">Watch demo</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showStripe()">Deposit funds</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showHideWithdrawbox()">Redeem tokens</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getPredictions()">Predictions</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getResults()">Results</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getTransactionhistory()">Transactions</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-target="dropdown_target" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">
-                        My account
-                    </a> -->
-                <!-- <div class="dropdown-menu" aria-labelledby="dropdown_target"> -->
-                <!-- <a class="dropdown-item" onclick="hideAllBoxes();showHideDepositbox()">Deposit funds</a> -->
-                <!-- <a class="dropdown-item" onclick="hideAllBoxes();showStripe()">Deposit funds</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();showHideWithdrawbox()">Redeem tokens</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getResults()">My results</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getPredictions()">My predictions</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getTransactionhistory()">Show my
-                            transactions</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();showDemoVideo()">Watch demo video</a>
-                    </div>
-                </li> -->
-                <li class="form-inline">
-                    <label style="color: #ffffff; margin: 0;">Round</label> &nbsp;
-                    <!-- <input class="form-control " type="text" id="selectround" oninput="getRound()"> -->
-                    <select id="selectround" onchange="getRound()">
-                    </select>
-                </li>
-                <li class="nav-item">
-                    <a id="funds" class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
-                    <a id="welcome" class="nav-link" href="#">Welcome to the game</a>
-                </li>
-                <li id="loginout" class="nav-item">
-                    <button type="button" class="btn btn-primary btnlogin" onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();showHideLoginbox()">Login</button>
-                </li>
-                <li class="nav-item">
-                    <button id="joinup" type="button" class="btn btn-secondary btnlogin" onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();$('#registerbox').show();">Join</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+	</header>
 	<div id="gameDiv">
 		<h4 class="white-text">Texas Hold 'Em Game</h4>
 		<div class="row">
