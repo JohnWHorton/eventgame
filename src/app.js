@@ -5,8 +5,16 @@ const socketio = require('socket.io');
 const Game = require('./classes/game.js');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
+// const server = http.createServer(app);
+const server = require('http').createServer(app);
+
+// socket.io and then i added cors for cross origin to localhost only
+const io = require('socket.io')(server, {
+       cors: {
+        origin: "http://localhost:3000", //specific origin you want to give access to,
+    },
+});
+// const io = socketio(server);
 
 const PORT = process.env.PORT || 3000;
 

@@ -28,8 +28,8 @@
 body,
 html,
 .login-box {
-  background: #2e64bc;
-  height: 95%;
+  background: transparent;
+  height: 100%;
 }
 
 .card {

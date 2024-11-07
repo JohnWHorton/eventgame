@@ -1,21 +1,22 @@
 <!doctype html>
 <html>
+	<head>
+		<link href="css/materialize.min.css" type="text/css" rel="stylesheet"
+			media="screen,projection" />
+		<link href="css/index.css" type="text/css" rel="stylesheet"
+			media="screen,projection" />
+		<meta property="og:image" content="./img/pokerBanner.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<title>Event Games</title>
+	</head>
 
-<head>
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-	<link href="css/index.css" type="text/css" rel="stylesheet" media="screen,projection" />
-	<meta property="og:image" content="./img/pokerBanner.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-	<title>Event Games</title>
-</head>
-
-<body>
-	<!-- <header>
+	<body>
+		<!-- <header>
 		<div class="navbar-fixed" id="navbar-ptwu">
 			<nav class="grey darken-4" role="navigation" id="navbar">
 				<a href="https://peterlwu.com" class="brand-logo center"><img class="responsive-img hover-item-2"
@@ -23,169 +24,138 @@
 			</nav>
 		</div>
 	</header> -->
-	<nav class="navbar navbar-custom navbar-expand-sm navbar-dark sticky-top">
+		<!-- <nav class="navbar navbar-custom navbar-expand-sm navbar-dark sticky-top">
 
-        <span style="font-size: 1.5rem; margin-right: 1rem;">AFL Pools</span>
+			<span style="font-size: 1.5rem; margin-right: 1rem;">Event Game</span>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+			<button class="navbar-toggler" data-toggle="collapse"
+				data-target="#collapse_target">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-        <div class="collapse navbar-collapse" id="collapse_target">
+			<div class="collapse navbar-collapse" id="collapse_target">
+				<ul class="navbar-nav"
+					style="width: 100%; justify-content: flex-end; gap: 15px;">
+					<li class="nav-item">
+						<a id="funds" class="nav-link" href="#"></a>
+					</li>
 
+					<li id="loginout" class="nav-item">
+						<button type="button" class="btn btn-primary btnlogin"
+							onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();showHideLoginbox()">Login</button>
+					</li>
+					<li class="nav-item">
+						<button id="joinup" type="button" class="btn btn-secondary btnlogin"
+							onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();$('#registerbox').show();">Join</button>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
 
-            <ul class="navbar-nav" style="width: 100%; justify-content: flex-end; gap: 15px;">
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showDemoVideo()">Watch demo</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showStripe()">Deposit funds</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();showHideWithdrawbox()">Redeem tokens</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getPredictions()">Predictions</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getResults()">Results</a>
-                </li>
-                <li class="nav-item" style="padding-top: 8px; cursor: pointer;">
-                    <a class="nav-item" onclick="hideAllBoxes();getTransactionhistory()">Transactions</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-target="dropdown_target" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">
-                        My account
-                    </a> -->
-                <!-- <div class="dropdown-menu" aria-labelledby="dropdown_target"> -->
-                <!-- <a class="dropdown-item" onclick="hideAllBoxes();showHideDepositbox()">Deposit funds</a> -->
-                <!-- <a class="dropdown-item" onclick="hideAllBoxes();showStripe()">Deposit funds</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();showHideWithdrawbox()">Redeem tokens</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getResults()">My results</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getPredictions()">My predictions</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();getTransactionhistory()">Show my
-                            transactions</a>
-                        <a class="dropdown-item" onclick="hideAllBoxes();showDemoVideo()">Watch demo video</a>
-                    </div>
-                </li> -->
-                <li class="form-inline">
-                    <label style="color: #ffffff; margin: 0;">Round</label> &nbsp;
-                    <!-- <input class="form-control " type="text" id="selectround" oninput="getRound()"> -->
-                    <select id="selectround" onchange="getRound()">
-                    </select>
-                </li>
-                <li class="nav-item">
-                    <a id="funds" class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
-                    <a id="welcome" class="nav-link" href="#">Welcome to the game</a>
-                </li>
-                <li id="loginout" class="nav-item">
-                    <button type="button" class="btn btn-primary btnlogin" onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();showHideLoginbox()">Login</button>
-                </li>
-                <li class="nav-item">
-                    <button id="joinup" type="button" class="btn btn-secondary btnlogin" onclick="$('.navbar .collapse').collapse('hide');hideAllBoxes();$('#registerbox').show();">Join</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+		<div id="gameDiv">
+			<h4 class="white-text">Texas Hold 'Em Game</h4>
+			<div class="row">
+				<div class="col s12 m3">
+					<div id="playerInformationCard" class="card green darken-2">
+						<div class="card-content white-text">
+							<span class="card-title" id="usernamesCards"></span>
+							<div id="mycards"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m2">
+					<div class="card green darken-2">
+						<div class="card-content white-text center-align">
+							<span class="card-title center-align" id="usernamesMoney"></span>
+							<div id="blindStatus"></div>
+							<div id="status"></div>
+							<br />
+							<div id="playNext"></div>
+							<button onClick=fold() id="usernameFold"
+								class="btn white black-text menuButtons">Fold</button>
+							<br />
+							<button onClick=check() id="usernameCheck"
+								class="btn white black-text menuButtons">Check</button>
+							<br />
+							<button href="#betModal" onClick=updateBetModal() id="usernameBet"
+								class="btn white black-text modal-trigger menuButtons">Bet</button>
+							<br />
+							<button onClick=call() id="usernameCall"
+								class="btn white black-text menuButtons">Call</button>
+							<br />
+							<button href="#raiseModal" onClick=updateRaiseModal() id="usernameRaise"
+								class="btn white black-text modal-trigger menuButtons">Raise</button>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m7">
+					<div class="card green darken-2">
+						<div class="card-content white-text">
+							<span id="table-title" class="card-title"></span>
 
-	<div id="gameDiv">
-		<h4 class="white-text">Texas Hold 'Em Game</h4>
-		<div class="row">
-			<div class="col s12 m3">
-				<div id="playerInformationCard" class="card green darken-2">
-					<div class="card-content white-text">
-						<span class="card-title" id="usernamesCards"></span>
-						<div id="mycards"></div>
+							<div id="communityCards"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col s12 m2">
-				<div class="card green darken-2">
-					<div class="card-content white-text center-align">
-						<span class="card-title center-align" id="usernamesMoney"></span>
-						<div id="blindStatus"></div>
-						<div id="status"></div>
-						<br />
-						<div id="playNext"></div>
-						<button onClick=fold() id="usernameFold" class="btn white black-text menuButtons">Fold</button>
-						<br />
-						<button onClick=check() id="usernameCheck" class="btn white black-text menuButtons">Check</button>
-						<br />
-						<button href="#betModal" onClick=updateBetModal() id="usernameBet"
-							class="btn white black-text modal-trigger menuButtons">Bet</button>
-						<br />
-						<button onClick=call() id="usernameCall" class="btn white black-text menuButtons">Call</button>
-						<br />
-						<button href="#raiseModal" onClick=updateRaiseModal() id="usernameRaise"
-							class="btn white black-text modal-trigger menuButtons">Raise</button>
-					</div>
-				</div>
+			<div class="row">
+				<div id="opponentCards"></div>
 			</div>
-			<div class="col s12 m7">
-				<div class="card green darken-2">
-					<div class="card-content white-text">
-						<span id="table-title" class="card-title"></span>
-
-						<div id="communityCards"></div>
-					</div>
+		</div>
+		<div id="mainContent">
+			<div class=" valign-wrapper row login-box">
+				<div class="col card hoverable s12 m4">
+					<form>
+						<div class="card-content">
+							<span class="card-title black-text">Texas Hold &apos;Em Poker -
+								Event</span>
+							<p>Welcome to Texas Hold &apos;Em Poker! Host a game and give the code to
+								friends so they can join and play.
+							</p>
+						</div>
+						<div class="card-action center-align">
+							<a id="hostButton"
+								class="btn-large waves-effect waves-light indigo darken-3 white-text modal-trigger"
+								href="#hostModal">Host
+								Game</a>
+							<a id="joinButton"
+								class="btn-large waves-effect waves-light indigo darken-3 white-text modal-trigger"
+								href="#joinModal">Join
+								Game</a>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div id="opponentCards"></div>
-		</div>
-	</div>
-	<div id="mainContent">
-		<div class=" valign-wrapper row login-box">
-			<div class="col card hoverable s12 m4">
-				<form>
-					<div class="card-content">
-						<span class="card-title black-text">Texas Hold &apos;Em Poker - Event</span>
-						<p>Welcome to Texas Hold &apos;Em Poker! Host a game and give the code to friends so they can join and play.
-						</p>
+		<div id="hostModal" class="modal">
+			<div class="modal-content">
+				<h4>Host Game</h4>
+				<div id="hostModalContent">
+					<p>Enter your name, and then we'll give you a code which you can give to
+						your friends as the host.</p>
+					<div class="input-field col s12">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="hostName-field" required />
 					</div>
-					<div class="card-action center-align">
-						<a id="hostButton" class="btn-large waves-effect waves-light indigo darken-3 white-text modal-trigger"
-							href="#hostModal">Host
-							Game</a>
-						<a id="joinButton" class="btn-large waves-effect waves-light indigo darken-3 white-text modal-trigger"
-							href="#joinModal">Join
-							Game</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id="hostModal" class="modal">
-		<div class="modal-content">
-			<h4>Host Game</h4>
-			<div id="hostModalContent">
-				<p>Enter your name, and then we'll give you a code which you can give to your friends as the host.</p>
-				<div class="input-field col s12">
-					<label for="name">Name</label>
-					<input type="text" name="name" id="hostName-field" required />
+					<button onclick=beginHost() type="submit"
+						class="waves-effect waves-light indigo darken-3 white-text btn-flat">Get
+						Code</button>
 				</div>
-				<button onclick=beginHost() type="submit"
-					class="waves-effect waves-light indigo darken-3 white-text btn-flat">Get
-					Code</button>
+				<div id="playersNames"></div>
+				<div id="startGameArea"></div>
 			</div>
-			<div id="playersNames"></div>
-			<div id="startGameArea"></div>
+			<div class="modal-footer">
+				<a class="modal-close waves-effect waves-light btn-flat">CLOSE</a>
+			</div>
 		</div>
-		<div class="modal-footer">
-			<a class="modal-close waves-effect waves-light btn-flat">CLOSE</a>
-		</div>
-	</div>
 	</div>
 
 	<div id="joinModal" class="modal">
 		<div class="modal-content">
 			<h4>Join Game</h4>
 			<div id="joinModalContent">
-				<p>Enter the your name and the code provided by the host to join their room:</p>
+				<p>Enter the your name and the code provided by the host to join their
+					room:</p>
 				<div class="input-field col s12">
 					<label for="name">Name</label>
 					<input type="text" name="name" id="joinName-field" required="required" />
@@ -214,7 +184,8 @@
 					<h4>Drag the slider to place your bet!</h4>
 				</div>
 				<p class="range-field">
-					<input type="range" id="betRangeSlider" min="0" max="100" value="0" onchange="updateBetDisplay()"
+					<input type="range" id="betRangeSlider" min="0" max="100" value="0"
+						onchange="updateBetDisplay()"
 						oninput="updateBetDisplay()" />
 				</p>
 			</form>
@@ -236,7 +207,8 @@
 					<h4>Drag the slider to raise the current top bet!</h4>
 				</div>
 				<p class="range-field">
-					<input type="range" id="raiseRangeSlider" min="0" max="100" value="0" onchange=updateRaiseDisplay() />
+					<input type="range" id="raiseRangeSlider" min="0" max="100" value="0"
+						onchange=updateRaiseDisplay() />
 				</p>
 			</form>
 			<br />
@@ -248,16 +220,14 @@
 			<a href="#!" class="modal-close waves-effect waves-light btn-flat">CLOSE</a>
 		</div>
 	</div>
-	<footer class="page-footer white">
-		<div class="container footer-c">
-			<b>© 2020 - Peter Wu. <a href="https://github.com/ptwu/distributed-texasholdem">GitHub Repository</a></b><br><br>
-	</footer>
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.5.0/socket.io.min.js"></script>
-	<script src="./main.js"> </script>
-	<script src="./js/materialize.min.js"></script>
 
-</body>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.5.0/socket.io.min.js"></script>
+		<script src="./main.js"> </script>
+		<script src="./js/materialize.min.js"></script>
+
+	</body>
 
 </html>
