@@ -7,9 +7,8 @@
   "author": "John H",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js",
-    "test": "jest --config=test/config.json"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "cluster": "^0.7.7",

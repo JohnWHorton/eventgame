@@ -1,12 +1,18 @@
 // server-side socket.io backend event handling
 const express = require('express');
 const http = require('http');
-const socketio = require('socket.io');
+// const socketio = require('socket.io');
 const Game = require('./classes/game.js');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
+const server = require('http').Server(app);
+const io = require('socket.io',{
+  cors: {
+    origin: ['http://18.171.54.238']
+  }
+})(server); 
+// const server = http.createServer(app);
+// const io = socketio(server);
 
 const PORT = process.env.PORT || 3000;
 
